@@ -1,0 +1,31 @@
+.button {
+    padding: 8px 20px;
+    border: none;
+    background-color: lightgray;
+    color: black;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.button.active {
+    background-color: blue;
+    color: white;
+}
+
+.pagination{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pagination button{
+    margin-right: 30px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+}
+
+.pagination .selected{
+    background-color: blue;
+}
