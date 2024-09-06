@@ -14,26 +14,26 @@ const Brand = () => {
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 items-center justify-center grid-cols-2 gap-8">
-        <div className="shadow-lg w-56 border-2 py-2 rounded-xl duration-1000 hover:text-white hover:bg-blue-500 my-auto">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 items-center justify-center gap-8">
+        <div className="shadow-lg md:w-56 border-2 py-2 rounded-xl duration-1000 hover:text-white hover:bg-blue-500 my-auto">
           <img className="w-20 object-cover h-20 mx-auto" src={brand1} alt="" />
           <h2 className="text-center text-2xl my-4 font-semibold">
             Rocking Chair
           </h2> 
         </div>
-        <div className="shadow-lg border-2 w-56 py-2 rounded-xl duration-1000 hover:text-white hover:bg-blue-500 my-auto">
+        <div className="shadow-lg border-2 md:w-56 py-2 gap-4 rounded-xl duration-1000 hover:text-white hover:bg-blue-500 my-auto">
           <img className="w-20 object-cover h-20 mx-auto" src={brand2} alt="" />
           <h2 className="text-center text-2xl my-4 font-semibold">
             Side Chair
           </h2> 
         </div>
-        <div className="shadow-lg w-56 border-2 py-2 rounded-xl duration-1000 hover:text-white hover:bg-blue-500 my-auto">
+        <div className="shadow-lg md:w-56 border-2 py-2 rounded-xl duration-1000 hover:text-white hover:bg-blue-500 my-auto">
           <img className="w-20 object-cover h-20 mx-auto" src={brand3} alt="" />
           <h2 className="text-center text-2xl my-4 font-semibold">
             Lounge Chair
           </h2> 
         </div>
-        <div className="shadow-lg w-56 border-2 py-2 rounded-xl duration-1000 hover:text-white hover:bg-blue-500 my-auto">
+        <div className="shadow-lg md:w-56 border-2 py-2 rounded-xl duration-1000 hover:text-white hover:bg-blue-500 my-auto">
           <img className="w-20 object-fit h-20 mx-auto" src={brand4} alt="" />
           <h2 className="text-center text-2xl my-4 font-semibold">
             Steelcase Chair

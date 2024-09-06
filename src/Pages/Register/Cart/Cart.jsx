@@ -16,7 +16,7 @@ const Cart = () => {
 
     useEffect(() => {
         if (user && user.email) {
-            axios.get(`http://localhost:5000/cart?email=${user.email}`)
+            axios.get(`https://furni-flex-server-lilac.vercel.app/cart?email=${user.email}`)
                 .then(response => setLocalCart(response.data))
                 .catch(error => console.error('Failed to fetch cart:', error));
         } else {
@@ -37,7 +37,7 @@ const Cart = () => {
         );
         setLocalCart(updatedCart);
 
-        axios.put(`http://localhost:5000/cart/${itemId}`, { quantity: updatedCart.find(item => item._id === itemId).quantity })
+        axios.put(`https://furni-flex-server-lilac.vercel.app/cart/${itemId}`, { quantity: updatedCart.find(item => item._id === itemId).quantity })
         .then(res => {
             console.log( res.data);
         })
@@ -62,7 +62,7 @@ const Cart = () => {
           }).then((result) => {
             if (result.isConfirmed) {
     
-                axios.delete(`http://localhost:5000/cart/${id}`)
+                axios.delete(`https://furni-flex-server-lilac.vercel.app/cart/${id}`)
                 .then(res=>{
     
                     if(res.data.deletedCount > 0){

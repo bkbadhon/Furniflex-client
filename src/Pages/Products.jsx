@@ -7,9 +7,12 @@ import './product.css'
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import axios from "axios";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Products = () => {
     const { user, products } = useContext(AuthContext); 
+    const navigate = useNavigate()
+    const location = useLocation()
     const [filterProducts, setFilterProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 6;
@@ -45,8 +48,16 @@ const Products = () => {
         }
     };
 
-    const handleCart = (item) => {
-        if (user && user.email) {
+    const handleCart = async (item) => {
+      
+        if (!user) {
+            if (location.pathname !== '/login') {
+                navigate('/login', { state: { from: location }, replace: true });
+            }
+            return; 
+        }
+    
+        try {
             const cartItem = {
                 menuId: item._id,
                 email: user.email,
@@ -55,22 +66,25 @@ const Products = () => {
                 image: item.photo,
                 brand: item.brand,
                 info: item.info,
-                quantity : 1,
+                quantity: 1,
             };
-            axios
-                .post("http://localhost:5000/cart", cartItem)
-                .then((res) => {
-                    if (res.data.insertedId) {
-                        Swal.fire({
-                            title: "Good job!",
-                            text: `${item.name} Added to Cart`,
-                            icon: "success",
-                        });
-                    }
-                })
-                .catch((err) => {
-                    console.log(err);
+    
+            const response = await axios.post('https://furni-flex-server-lilac.vercel.app/cart', cartItem);
+    
+            if (response.data.insertedId) {
+                Swal.fire({
+                    title: 'Good job!',
+                    text: `${item.name} added to cart`,
+                    icon: 'success',
                 });
+            }
+        } catch (err) {
+            console.error('Failed to add item to cart:', err);
+            Swal.fire({
+                title: 'Error!',
+                text: 'Failed to add item to cart. Please try again.',
+                icon: 'error',
+            });
         }
     };
 

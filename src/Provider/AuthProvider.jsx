@@ -16,7 +16,7 @@ const AuthProvider = ({children}) => {
     const [products, setProducts] =useState([])
     const [carts, setCarts] = useState([])
 
-    const api = "http://localhost:5000/products"
+    const api = "https://furni-flex-server-lilac.vercel.app/products"
     useEffect(() => {
         const fetchProducts = async () => {
             try {
@@ -36,7 +36,7 @@ const AuthProvider = ({children}) => {
     const fetchCarts = async (email) => {
         if (!email) return; 
         try {
-            const response = await axios.get(`http://localhost:5000/cart?email=${email}`);
+            const response = await axios.get(`https://furni-flex-server-lilac.vercel.app/cart?email=${email}`);
             setCarts(response.data);
         } catch (err) {
             console.error("Failed to fetch carts:", err);
