@@ -111,7 +111,7 @@ const Cart = () => {
                                                     +
                                                 </button>
                                             </div>
-                                            <img className="w-32 h-32 mb-2 rounded-xl bg-white p-2" src={item.image} alt="" />
+                                            <img className="md:w-32 md:h-32 w-20 h-20 mb-2 rounded-xl bg-white p-2" src={item.image} alt="" />
                                         </div>
                                         <div className="flex flex-col justify-between flex-grow">
                                             <h2 className="mt-4 md:text-xl text-sm font-semibold">{item.name}</h2>

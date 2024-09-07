@@ -13,12 +13,12 @@ const Offer = () => {
         />
         <div className="absolute md:flex justify-around items-center inset-0 text-white bg-black opacity-80">
           <div>
-            <h2 className="italic text-4xl my-4">
+            <h2 className="italic text-4xl px-4 my-4">
               Celebrate at one of the most awarded ShopCorner
             </h2>
-            <p className="text-lg mb-4">only this year our business launch</p>
+            <p className="text-lg px-4 mb-4">only this year our business launch</p>
           </div>
-          <div className="">
+          <div className="px-4">
             <button className=" p-2 px-4  bg-blue-600 text-white hover:bg-white duration-1000 hover:text-blue-600 rounded-2xl">
               Get Order
             </button>

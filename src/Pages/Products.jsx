@@ -115,12 +115,12 @@ const Products = () => {
                             Lounge Chair
                         </button>
                     </div>
-                    <div className="lg:w-10/12 mx-auto justify-center grid lg:grid-cols-3 md:grid-cols-2 lg:gap-24 md:gap-2 items-center">
+                    <div className="lg:w-10/12 mx-auto justify-center grid lg:grid-cols-3 md:grid-cols-2 lg:gap-24 md:gap-8 p-2 items-center">
                         {records.length > 0 ? (
                             records.map((item) => (
-                                <div key={item.id} className="border-2 border-gray-200 rounded-xl my-4 p-4 mx-auto">
-                                    <img className="w-full h-40 bg-gray-200 rounded-xl" src={item?.photo} alt={item.name} />
-                                    <div className="text-left my-2">
+                                <div key={item.id} className="border-2 h-auto  w-72 border-gray-200 rounded-xl my-4 p-4 mx-auto">
+                                    <img className="w-48 mx-auto h-40 bg-gray-200 my-4 rounded-xl" src={item?.photo} alt={item.name} />
+                                    <div className="text-center my-2">
                                         <h2 className="text-lg mb-2 font-semibold">{item.name}</h2>
                                     </div>
                                     <div className="flex justify-around items-center">
@@ -128,7 +128,7 @@ const Products = () => {
                                         <h2 className="mb-2 line-through text-gray-400 font-semibold">${item.previous_price}</h2>
                                         <h2 className="mb-2 font-semibold">{item.discount}% <span className="text-orange-600">OFF</span></h2>
                                     </div>
-                                    <h2 className="text-xs mb-4">{item.info}</h2>
+                                    <h2 className="text-base text-center mb-4">{item.info}</h2>
                                     <div>
                                         <button onClick={() => handleCart(item)} className="w-full p-1 flex items-center justify-center gap-2 hover:bg-blue-500 duration-500 mx-auto bg-black text-white font-semibold text-lg">
                                             <IoBag /> Add to cart

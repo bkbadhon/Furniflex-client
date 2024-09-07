@@ -16,7 +16,7 @@ const Gallery = () => {
         <div ><img className='lg:h-80 md:h-60 object-cover rounded-2xl w-full' src={img2} alt="" /></div>
         <div> <img className='lg:h-80 md:h-60 object-cover rounded-2xl w-full' src={img3} alt="" /></div>
         <div><img className='lg:h-80 md:h-60 object-cover rounded-2xl w-full' src={img4} alt="" /></div>
-        <div><img className='lg:h-80 md:h-60 h-40 object-cover rounded-2xl w-full' src={img5} alt="" /></div>
+        <div><img className='lg:h-80 md:h-60  object-cover rounded-2xl w-full' src={img5} alt="" /></div>
         <div className='col-span-2'><img className='lg:h-80 md:h-60 rounded-2xl w-full object-cover' src={img6} alt="" /></div>
         
 
